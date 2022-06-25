@@ -6,7 +6,7 @@
 }
 body {
     background-color: 	#030303;  
-    color: aliceblue;
+    color: #E1E8ED;
     font-family: 'Roboto', sans-serif;
 }
 .App{
@@ -21,18 +21,36 @@ body {
     justify-content: flex-start;
 }
 .twitterIcon{
-    margin: 10px 0 8px 0px;
+    margin: 20px 20px 18px -60px;
+}
+.twitterHomeIcon{
+color: #E1E8ED;
+background-color: #E1E8ED;
+
 }
 .navItem{
-    margin: 15px 70px 15px 0;
-    font-size: 20px;
+    margin: 15px 0px 15px -60px;
+    font-size: 22px;
+    display: flex;
+    gap: 20px;
 }
 .tweetBtn{
-    width: 50px;
+    cursor: pointer;
+    margin: 20px 30px 0 -70px;
+    width: 220px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    color: #f8fcff;
+    background-color: #1DA1F2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 .homeMiddleSection{
     border: 1px solid #5a5959;
     height: 100vh;
-    width: 600px
+    width: 630px
 }
 
