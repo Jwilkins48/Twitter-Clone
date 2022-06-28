@@ -66,6 +66,7 @@ body {
 /* MIDDLE SECTION  */
 .homeMiddleSection{
     border: 1px solid #5a5959;
+    border-top: 1px solid #000000;
     height: 100vh;
     width: 630px
 }
