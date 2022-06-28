@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: 	#030303;  
+    background-color: 	#000000;  
     color: #E1E8ED;
     font-family: 'Roboto', sans-serif;
 }
@@ -74,12 +74,11 @@ body {
     font-size: 20px;
 }
 .whatsHappeningContainer{
-    height: 175px;
+    height: 160px;
     border-bottom: 1px solid #5a5959;
 }
 
 .postForm{
-    display: flex;
     margin-top: 25px;
     align-items: center;
 }
@@ -93,20 +92,55 @@ body {
     background-color: transparent;
     color: #E1E8ED;
     border: transparent;
-    font-size: 19px;
+    font-size: 21px;
+}
+.postInput:focus{
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+.accountPostContainer{
+    display: flex;
 }
 .homeTweetBtn{
+    margin: 12px;
     cursor: pointer;
-    margin: 20px 0px 10px 500px;
-    width: 105px;
-    height: 45px;
+    width: 85px;
+    height: 38px;
     border: 1px solid transparent;
     border-radius: 50px;
     color: #f8fcff;
     background-color: #1DA1F2;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
+}
+.iconPostContainer{
+   display: flex;
+   justify-content: space-between;
+}
+.leftSideInfo{
+    display: flex;
+}
+.iconPostContainer p{
+    cursor: pointer;
+    padding: 10px;
+
+}
+.iconPostContainer p:hover{
+    background-color: #072a41;
+    opacity: .98;
+    border: transparent;
+    border-radius: 30px;
+    height: 38px;
+    
+}
+.media{
+    margin: 10px 0px -10px 72px;
+}
+.icon{
+    margin: 10px 0px -10px;
 }
 

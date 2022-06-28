@@ -1,6 +1,5 @@
 import React from 'react'
 import image from '../components/images/whiteLogo.png'
-import twitterHome from '../components/images/homeLogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouseUser, faHashtag, faBell, faEnvelope, faBookmark, faRectangleList, faUser, faCommentDots } from '@fortawesome/free-solid-svg-icons'
 
@@ -15,7 +14,7 @@ function Header() {
     const moreIcon = <FontAwesomeIcon icon={faCommentDots}/>
   return (
     <div className='navBar'>
-        <img className='twitterIcon' src={image} alt='twitter icon' width="29" height="26"></img>
+        <img className='twitterIcon' src={image} alt='twitter icon' width="29" height="24"></img>
         <p className='navItem'>{homeIcon} Home</p>
         <p className='navItem'>{exploreIcon} Explore</p>
         <p className='navItem'>{notificationIcon} Notifications</p>
@@ -26,6 +25,7 @@ function Header() {
         <p className='navItem'>{moreIcon} More</p> 
 
         <button className='tweetBtn'>Tweet</button>
+        
     </div>
   )
 }
