@@ -10,9 +10,6 @@ function App() {
     <div className="App">
       <Header />
       <Home twitterFeed={twitterFeed}/>
-
-
-
       <NotificationBar />
     </div>
   );

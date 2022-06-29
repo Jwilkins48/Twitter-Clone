@@ -1,7 +1,7 @@
 import React from 'react'
 import ProfilePicture from '../components/images/kitty.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAlignLeft, faCalendar, faClosedCaptioning, faFaceSmile, faImage, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faAlignLeft, faArrowUpFromBracket, faCalendar, faClosedCaptioning, faComment, faFaceSmile, faHeart, faImage, faLocationDot, faRetweet } from '@fortawesome/free-solid-svg-icons'
 
 function Home({twitterFeed}) {
   const media = <FontAwesomeIcon icon={faImage} />
@@ -10,6 +10,11 @@ function Home({twitterFeed}) {
   const align = <FontAwesomeIcon icon={faAlignLeft} />
   const calender = <FontAwesomeIcon icon={faCalendar} />
   const destination = <FontAwesomeIcon icon={faLocationDot} />
+  const comment = <FontAwesomeIcon icon={faComment} />
+  const retweet = <FontAwesomeIcon icon={faRetweet} />
+  const heart = <FontAwesomeIcon icon={faHeart} />
+  const share = <FontAwesomeIcon icon={faArrowUpFromBracket} />
+
   return (
     <div className='homeContainer'>
       <div className='homeMiddleSection'>
@@ -38,6 +43,24 @@ function Home({twitterFeed}) {
                 
               </form>
             </div>
+            
+            {/* Twitter Feed Start */}
+            {twitterFeed.map((item) => (
+              <div key={item.id} id={item.id} className='tweetContainer'>
+                <div className='tweetUserInfo'> <img className='profilePicture' src={ProfilePicture} alt='user profile' width="50" height="44"></img>
+                  <span className='users-Name'>{item.name} </span> @{item.username} {item.timePosted}hr
+                </div>
+                <div className='postedTweetInfo'>{item.tweet}</div>
+
+                <div className='postedTweetIcons'>
+                  <p className='postedIcons comment'>{comment} {item.comments}</p>
+                  <p className='postedIcons retweet'>{retweet} {item.retweets}</p>
+                  <p className='postedIcons heart'>{heart} {item.likes}</p>
+                  <p className='postedIcons share'>{share}</p>
+                </div>
+              </div>
+            ))}
+
       </div>
     </div>
   )

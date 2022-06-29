@@ -17,7 +17,7 @@ body {
 
 /* NAV SECTION */
 .navBar{
-    height: 100vh;
+    margin-bottom: 730px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -67,7 +67,7 @@ body {
 .homeMiddleSection{
     border: 1px solid #5a5959;
     border-top: 1px solid #000000;
-    height: 100vh;
+    height: 100%;
     width: 630px
 }
 .homeHeader{
@@ -140,8 +140,53 @@ body {
 }
 .media{
     margin: 10px 0px -10px 72px;
+    color: #1d9bf0;
 }
 .icon{
     margin: 10px 0px -10px;
+    color: #1d9bf0;
 }
 
+.tweetContainer{
+    border-bottom: 1px solid #5a5959;
+    height: fit-content;
+    padding: 20px 0 23px 0;
+    font-size: 15px;
+    /* white-space: pre-wrap; */
+}
+.tweetUserInfo{
+    display: flex;
+    align-items: flex-start;
+    color: #6b6b6b;
+}
+.postedTweetInfo{
+    margin: -20px 0 0 80px;
+}
+.users-Name{
+    font-weight: bold;
+    margin-right: 5px;
+    color: #f8fcff;
+}
+.postedTweetIcons{
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0px 0px 5px;
+    gap: 40px;
+    color: #5a5959;
+}
+.postedTweetIcons:hover{
+    cursor: pointer;
+}
+.postedIcons{
+    margin: 10px 0px -10px 70px;
+}
+
+.comment:hover, .share:hover{
+    color: #196aa0;
+}
+.retweet:hover{
+    color: #19cf86;
+}
+.heart:hover{
+    color: #b03060;
+}

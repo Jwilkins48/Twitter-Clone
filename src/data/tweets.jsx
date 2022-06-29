@@ -5,6 +5,9 @@ const twitterFeed = [
         username: 'username',
         timePosted: 5,
         tweet: 'hi',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     },
     {
         id: 2,
@@ -12,6 +15,9 @@ const twitterFeed = [
         username: 'username',
         timePosted: 5,
         tweet: 'hi(:',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     },
     {
         id: 3,
@@ -19,6 +25,9 @@ const twitterFeed = [
         username: 'username',
         timePosted: 5,
         tweet: 'hi!',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     },
     {
         id: 4,
@@ -26,6 +35,9 @@ const twitterFeed = [
         username: 'username',
         timePosted: 5,
         tweet: 'hiii',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     },
     {
         id: 5,
@@ -33,6 +45,9 @@ const twitterFeed = [
         username: 'username',
         timePosted: 5,
         tweet: 'hi.',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     },
     {
         id: 6,
@@ -40,6 +55,9 @@ const twitterFeed = [
         username: 'username',
         timePosted: 5,
         tweet: 'hii',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     },
     {
         id: 7,
@@ -47,24 +65,36 @@ const twitterFeed = [
         username: 'username',
         timePosted: 5,
         tweet: 'hi..',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     },{
         id: 8,
         name: 'name8',
         username: 'username',
         timePosted: 5,
         tweet: 'hi!',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     },{
         id: 9,
         name: 'name9',
         username: 'username',
         timePosted: 5,
         tweet: 'hi!!',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     },{
         id: 10,
         name: 'name10',
         username: 'username',
         timePosted: 5,
         tweet: 'hi',
+        comments: 10,
+        retweets: 24,
+        likes: 43,
     }
 ]
 
