@@ -1,7 +1,7 @@
 import React from 'react'
 import ProfilePicture from '../components/images/kitty.webp'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAlignLeft, faArrowUpFromBracket, faCalendar, faClosedCaptioning, faComment, faFaceSmile, faHeart, faImage, faLocationDot, faRetweet } from '@fortawesome/free-solid-svg-icons'
+import { faAlignLeft, faArrowUpFromBracket, faCalendar, faClosedCaptioning, faComment, faFaceSmile, faHeart, faImage, faLocationDot, faRetweet, faStarOfLife } from '@fortawesome/free-solid-svg-icons'
 
 function Home({twitterFeed}) {
   const media = <FontAwesomeIcon icon={faImage} />
@@ -14,15 +14,21 @@ function Home({twitterFeed}) {
   const retweet = <FontAwesomeIcon icon={faRetweet} />
   const heart = <FontAwesomeIcon icon={faHeart} />
   const share = <FontAwesomeIcon icon={faArrowUpFromBracket} />
+  const topTweet = <FontAwesomeIcon icon={faStarOfLife} />
 
   return (
     <div className='homeContainer'>
       <div className='homeMiddleSection'>
 
                   <div className='whatsHappeningContainer'>
-                  <h3 className='homeHeader'>Home</h3>
 
-                  <form className='postForm'>
+                  <div className='homeHeaderContainer'>
+                    <h3 className='homeHeader'>Home</h3>
+                    <p className='homeHeaderIcon'>{topTweet}</p>
+                  </div>
+
+                <div className='formContainer'>
+                <form className='postForm'>
                 <div className='accountPostContainer'>
                     <img className='profilePicture' src={ProfilePicture} alt='Cat profile' width="53" height="47"></img>
                   <input autoComplete="off" className='postInput' type='text' name='tweet' placeholder="What's happening?" />
@@ -42,6 +48,7 @@ function Home({twitterFeed}) {
                 </div>            
                 
               </form>
+                </div>
             </div>
             
             {/* Twitter Feed Start */}

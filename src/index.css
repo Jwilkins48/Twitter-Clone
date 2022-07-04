@@ -70,12 +70,24 @@ body {
     height: 100%;
     width: 630px
 }
+.homeHeaderContainer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+}
 .homeHeader{
     margin: 13px 0 5px 15px;
     font-size: 20px;
+    padding: 2px;
+}
+.homeHeaderIcon{
+    margin: 15px;
+    margin-bottom: 0px;
 }
 .whatsHappeningContainer{
-    height: 160px;
+    height: 180px;
     border-bottom: 1px solid #5a5959;
 }
 
