@@ -54,8 +54,8 @@ function Home({twitterFeed}) {
             {/* Twitter Feed Start */}
             {twitterFeed.map((item) => (
               <div key={item.id} id={item.id} className='tweetContainer'>
-                <div className='tweetUserInfo'> <img className='profilePicture' src={ProfilePicture} alt='user profile' width="50" height="44"></img>
-                  <span className='users-Name'>{item.name} </span> @{item.username} {item.timePosted}hr
+                <div className='tweetUserInfo'> <img className='twitterFeedImages' src={item.src} alt='user profile' width="50" height="47"></img>
+                  <span className='users-Name'>{item.name} </span> @{item.username} . {item.timePosted}hr
                 </div>
                 <div className='postedTweetInfo'>{item.tweet}</div>
 

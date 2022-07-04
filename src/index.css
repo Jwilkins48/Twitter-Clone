@@ -62,7 +62,6 @@ body {
     background-color: #1998e7;
 }
 
-
 /* MIDDLE SECTION  */
 .homeMiddleSection{
     border: 1px solid #5a5959;
@@ -96,6 +95,11 @@ body {
     align-items: center;
 }
 .profilePicture{
+    margin: 10px;
+    border-radius: 50%;
+    margin: 0px 10px 0 15px;
+}
+.twitterFeedImages{
     margin: 10px;
     border-radius: 50%;
     margin: 0px 10px 0 15px;
