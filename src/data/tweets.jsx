@@ -63,7 +63,7 @@ const twitterFeed = [
         comments: 45,
         retweets: 98,
         likes: 114,
-        src: 'profileImages/kvothe.jpeg',
+        src: 'profileImages/kvothe.jpg',
     },
     {
         id: 7,
@@ -84,7 +84,7 @@ const twitterFeed = [
         comments: 34,
         retweets: 65,
         likes: 37,
-        src: 'profileImages/janeShepard.jpg',
+        src: 'profileImages/jane.jpg',
     },
     {
         id: 9,
@@ -95,7 +95,7 @@ const twitterFeed = [
         comments: 46,
         retweets: 85,
         likes: 112,
-        src: 'profileImages/locke.png',
+        src: 'profileImages/locke.jpg',
     },{
         id: 10,
         name: 'Jimmy Neutron',

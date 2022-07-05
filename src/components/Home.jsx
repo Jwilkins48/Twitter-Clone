@@ -1,9 +1,10 @@
-import React from 'react'
-import ProfilePicture from '../components/images/kitty.webp'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAlignLeft, faArrowUpFromBracket, faCalendar, faClosedCaptioning, faComment, faFaceSmile, faHeart, faImage, faLocationDot, faRetweet, faStarOfLife } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import ProfilePicture from '../components/images/kitty.webp';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
+import { faAlignLeft, faArrowUpFromBracket, faCalendar, faClosedCaptioning, faComment, faEllipsis, faFaceSmile, faHeart, faImage, faLocationDot, faRetweet, faStarOfLife } from '@fortawesome/free-solid-svg-icons';
 
-function Home({twitterFeed}) {
+function Home({twitterFeed, addTweet, deleteTweet}) {
   const media = <FontAwesomeIcon icon={faImage} />
   const gif = <FontAwesomeIcon icon={faClosedCaptioning} />
   const smile = <FontAwesomeIcon icon={faFaceSmile} />
@@ -15,6 +16,32 @@ function Home({twitterFeed}) {
   const heart = <FontAwesomeIcon icon={faHeart} />
   const share = <FontAwesomeIcon icon={faArrowUpFromBracket} />
   const topTweet = <FontAwesomeIcon icon={faStarOfLife} />
+  const options = <FontAwesomeIcon icon={faEllipsis} />
+
+  const [tweet, setTweet] = useState('');
+  const [btnDisabled, setBtnDisabled] = useState(true);
+
+  const handleChange = (e) => {
+    if(tweet === ''){
+      setBtnDisabled(true);
+    } else{
+      setBtnDisabled(false);
+    }
+    setTweet(e.target.value);
+
+    // (tweet === '') ? setBtnDisabled(true) : setBtnDisabled(true);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if(tweet.trim().length > 1){
+      const newTweet = {
+        tweet: tweet,
+      }
+      addTweet(newTweet);
+      setTweet('');
+    }
+  }
 
   return (
     <div className='homeContainer'>
@@ -28,10 +55,14 @@ function Home({twitterFeed}) {
                   </div>
 
                 <div className='formContainer'>
-                <form className='postForm'>
+
+                {/* Tweet */}
+
+                <form onSubmit={handleSubmit} className='postForm'>
                 <div className='accountPostContainer'>
                     <img className='profilePicture' src={ProfilePicture} alt='Cat profile' width="53" height="47"></img>
-                  <input autoComplete="off" className='postInput' type='text' name='tweet' placeholder="What's happening?" />
+                  {/* Tweet Input */}
+                  <input onChange={handleChange} value={tweet} autoComplete="off" className='postInput' type='text' name='tweet' placeholder="What's happening?" />
                 </div>
 
                 <div className='iconPostContainer'>
@@ -44,18 +75,24 @@ function Home({twitterFeed}) {
                     <p className='icon'>{destination}</p>
                   </div>
 
-                  <button className='homeTweetBtn'>Tweet</button>
+                  {/* Home Tweet Btn */}
+                  <button type='submit' disabled={btnDisabled} className='homeTweetBtn'>Tweet</button>
+
                 </div>            
                 
               </form>
                 </div>
             </div>
             
-            {/* Twitter Feed Start */}
+            {/* Twitter Feed Start - *Still Need To Create Custom Tweet Component */}
+
             {twitterFeed.map((item) => (
               <div key={item.id} id={item.id} className='tweetContainer'>
                 <div className='tweetUserInfo'> <img className='twitterFeedImages' src={item.src} alt='user profile' width="50" height="47"></img>
                   <span className='users-Name'>{item.name} </span> @{item.username} . {item.timePosted}hr
+
+                  {/* Change to more options menu later */}
+                  <button onClick={() => deleteTweet(item.id)} className='optionsBtn'>{options}</button>
                 </div>
                 <div className='postedTweetInfo'>{item.tweet}</div>
 
