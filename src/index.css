@@ -66,7 +66,7 @@ body {
 
 /* MIDDLE SECTION  */
 .homeMiddleSection{
-    border: 1px solid #5a5959;
+    border: 1px solid #424242;
     border-top: 1px solid #000000;
     height: 100%;
     width: 630px
@@ -125,7 +125,7 @@ body {
 .accountPostContainer{
     display: flex;
 }
-.homeTweetBtn{
+#homeTweetBtn{
     margin: 12px;
     cursor: pointer;
     width: 85px;
@@ -139,10 +139,16 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
 }
+
+.disabledBtn{
+    background-color: #0c3a57;
+}
+
 .iconPostContainer{
    display: flex;
    justify-content: space-between;
 }
+
 .leftSideInfo{
     display: flex;
 }
@@ -169,7 +175,7 @@ body {
 }
 
 .tweetContainer{
-    border-bottom: 1px solid #5a5959;
+    border-bottom: 1px solid #424242;
     height: fit-content;
     padding: 20px 0 23px 0;
     font-size: 15px;

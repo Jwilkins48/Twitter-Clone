@@ -76,7 +76,7 @@ function Home({twitterFeed, addTweet, deleteTweet}) {
                   <p className='icon'>{destination}</p>
                 </div>
                 {/* Home Tweet Btn */}
-                <button type='submit' disabled={btnDisabled} className='homeTweetBtn'>Tweet</button>
+                <button type='submit' disabled={btnDisabled} id='homeTweetBtn'>Tweet</button>
               </div>            
                 
             </form>
