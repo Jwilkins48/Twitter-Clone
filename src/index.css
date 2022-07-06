@@ -11,10 +11,12 @@ body {
 }
 .App{
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
 }
-
+.appRightSide{
+    display: flex;
+}
 /* NAV SECTION */
 .navBar{
     margin-bottom: 730px;
@@ -181,6 +183,27 @@ body {
 .postedTweetInfo{
     margin: -20px 0 0 80px;
 }
+
+/* Top Options on Tweet Button */
+.optionsBtnContainer{
+    margin: -5px 20px 0 auto;
+}
+.optionsBtn{
+    background-color: transparent;
+    color: #71767b;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+
+}
+.optionsBtn:hover{
+    background-color: #041724;
+    border: transparent;
+    border-radius: 50%;
+    color: #2893da;
+}
+
+
 .users-Name{
     font-weight: bold;
     margin-right: 5px;
@@ -201,7 +224,7 @@ body {
 }
 
 .comment:hover, .share:hover{
-    color: #196aa0;
+    color: #1c6e9e;
 }
 .retweet:hover{
     color: #19cf86;

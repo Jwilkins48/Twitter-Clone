@@ -20,8 +20,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Home twitterFeed={twitterFeed} addTweet={addTweet} deleteTweet={deleteTweet}/>
-      <NotificationBar />
+      <div className="appRightSide">
+        <Home twitterFeed={twitterFeed} addTweet={addTweet} deleteTweet={deleteTweet}/>
+        <NotificationBar />
+      </div>
     </div>
   );
 }

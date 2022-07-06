@@ -9,7 +9,7 @@ function TweetCard({item, deleteTweet}) {
   const retweet = <FontAwesomeIcon icon={faRetweet} />
   const heart = <FontAwesomeIcon icon={faHeart} />
   const share = <FontAwesomeIcon icon={faArrowUpFromBracket} />
-  const options = <FontAwesomeIcon icon={faEllipsis} />
+  const options = <FontAwesomeIcon size="lg" icon={faEllipsis} />
 
 
   return (
@@ -20,7 +20,9 @@ function TweetCard({item, deleteTweet}) {
             <span className='users-Name'>{item.name} </span> @{item.username} . {item.timePosted}hr
 
             {/* Change to more options menu later */}
-            <button onClick={() => deleteTweet(item.id)} className='optionsBtn'>{options}</button>
+            <div className='optionsBtnContainer'>
+              <button onClick={() => deleteTweet(item.id)} className='optionsBtn'>{options}</button>
+            </div>
             </div>
             <div className='postedTweetInfo'>{item.tweet}</div>
 
