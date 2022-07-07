@@ -19,6 +19,7 @@ function Home({twitterFeed, addTweet, deleteTweet}) {
   const [tweet, setTweet] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(true);
 
+
   const handleChange = (e) => {
     if(tweet === ''){
       setBtnDisabled(true);
@@ -39,6 +40,7 @@ function Home({twitterFeed, addTweet, deleteTweet}) {
         username: 'Jenna682',
         timePosted: 0,
         src: 'profileImages/cat.jpeg',
+        userTweet: true,
       }
       addTweet(newTweet);
       setTweet('');
@@ -82,8 +84,6 @@ function Home({twitterFeed, addTweet, deleteTweet}) {
             </form>
           </div>
           </div>
-            
-          {/* Twitter Feed Start - *Still Need To Create Custom Tweet Component */}
 
           {twitterFeed.map((item) => (
             <div key={item.id} id={item.id}>

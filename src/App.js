@@ -5,6 +5,7 @@ import data from './data/tweets';
 import { useState } from 'react'
 import {v4 as uuidv4} from 'uuid'
 
+
 function App() {
   const [twitterFeed, setTwitterFeed] = useState(data);
 
@@ -14,6 +15,7 @@ function App() {
   }
 
   const deleteTweet = (id) => {
+    
     setTwitterFeed(twitterFeed.filter((item) => item.id !== id));
   }
 

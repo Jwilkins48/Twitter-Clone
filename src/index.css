@@ -227,6 +227,9 @@ body {
 }
 .postedIcons{
     margin: 10px 0px -10px 70px;
+    background-color: transparent;
+    color: #5a5959;
+    cursor: pointer;
 }
 
 .comment:hover, .share:hover{
