@@ -1,15 +1,16 @@
 import React from 'react'
+import { useState } from 'react';
 
+function UserTweet(props) {
 
-function UserTweet() {
-   
+  const [open, setOpen] = useState(false);
+
   return (
-    <div>
-        <select>
-            <option>Follow</option>
-            <option>report</option>
-        </select>
-    </div>
+    <li className='optionItems'>
+        <a href='#' className='optionIconBtn' onClick={() => setOpen(!open)}>hi</a>
+
+        {open}
+    </li>
   )
 }
 

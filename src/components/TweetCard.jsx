@@ -20,11 +20,6 @@ function TweetCard({item, deleteTweet}) {
   //   console.log(item.userTweet);
   // }
 
-  const moreOptionsMenu = () => {
-    console.log('hi');
-    <UserTweet />
-  }
-
 
   return (
 
@@ -35,7 +30,25 @@ function TweetCard({item, deleteTweet}) {
             {/* Change to more options menu later */}
             <div className='optionsBtnContainer'>
               {/* <button onClick={() => deleteTweet(item.id)} className='optionsBtn'>{options}</button> */}
-              <button onClick={() => moreOptionsMenu()} className='optionsBtn'>{options}</button>
+
+
+              <div className="dropdown">
+                <button className='optionsBtn'>{options}</button>
+                <div className="dropdownMenu">
+                  <ul className='dropdownMenuList'>
+                    <li>Not interested in this Tweet</li>
+                    <li>Follow @{item.username}</li>
+                    <li>Add/remove @{item.username} from Lists</li>
+                    <li>Mute @{item.username}</li>
+                    <li>Block @{item.username}</li>
+                    <li>Embed Tweet</li>
+                    <li>Report Tweet</li>
+                  </ul>
+                </div>
+              </div>
+
+
+
             </div>
             </div>
             <div className='postedTweetInfo'>{item.tweet}</div>

@@ -210,6 +210,10 @@ body {
 }
 
 
+
+
+
+
 .users-Name{
     font-weight: bold;
     margin-right: 5px;
@@ -240,4 +244,40 @@ body {
 }
 .heart:hover{
     color: #b03060;
+}
+
+
+.dropdown{
+    position: relative;
+}
+.dropdownMenu{
+    box-shadow: rgba(120, 147, 170, 0.48) 1px 2px 6px 0px, rgba(124, 124, 124, 0.8) -1px -2px 6px 0px;
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transform: translateY(-10px);
+    position: absolute;
+    right: 0;
+    background-color: #000000;
+    border: 1px solid #5a5959;
+    color: #dddddd;
+    padding: .75rem;
+    border-radius: .25rem;
+    width: 330px;
+    height: auto;
+    z-index: -1;
+}
+.dropdown > .optionsBtn:focus + .dropdownMenu {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
+}
+
+.dropdownMenuList li{
+    list-style-type: none;
+    padding: 13px 0 13px 0;
+    cursor: pointer;
+}
+.dropdownMenuList li:hover{
+    background-color: #0e0e0e;
 }
