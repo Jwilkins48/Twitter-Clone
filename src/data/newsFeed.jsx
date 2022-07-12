@@ -22,6 +22,12 @@ const twitterFeed = [
         name: 'Supernatural',
         timePosted: 'trending',
         article: "John Winchester",
+    },
+    {
+        id: 5,
+        name: 'VICE News',
+        timePosted: 'Yesterday',
+        article: "Scientists Just Discovered a New T. Rex-Like Dinosaur",
     }
 ]
 
