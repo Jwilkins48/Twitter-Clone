@@ -40,6 +40,9 @@ function Home({twitterFeed, addTweet, deleteTweet}) {
         username: 'Jenna682',
         timePosted: 0,
         src: 'profileImages/cat.jpeg',
+        comments: 0,
+        retweets: 0,
+        likes: 0,
         userTweet: true,
       }
       addTweet(newTweet);

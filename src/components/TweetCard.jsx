@@ -2,8 +2,9 @@ import React from 'react'
 import Card from './Card'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpFromBracket, faEllipsis, faComment, faHeart, faRetweet, } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpFromBracket, faEllipsis, faComment, faHeart, faRetweet, faFaceFrown, faUserPlus, faTableList, faVolumeXmark, faBan, faCode, faFlag, } from '@fortawesome/free-solid-svg-icons';
 import UserTweet from './dropdownMenus/UserTweet';
+let randomNumbers = require('random-number');
 
 
 function TweetCard({item, deleteTweet}) {
@@ -14,11 +15,42 @@ function TweetCard({item, deleteTweet}) {
   const share = <FontAwesomeIcon size="lg" icon={faArrowUpFromBracket} />
   const options = <FontAwesomeIcon size="lg" icon={faEllipsis} />
 
+  const frown = <FontAwesomeIcon size="lg" icon={faFaceFrown} />
+  const profileIcon = <FontAwesomeIcon size="lg" icon={faUserPlus} />
+  const lists = <FontAwesomeIcon size="lg" icon={faTableList} />
+  const mute = <FontAwesomeIcon size="lg" icon={faVolumeXmark} />
+  const block = <FontAwesomeIcon size="lg" icon={faBan} />
+  const embed = <FontAwesomeIcon size="lg" icon={faCode} />
+  const report = <FontAwesomeIcon size="lg" icon={faFlag} />
 
-  // const increment = () => {
-  //   console.log('hi');
-  //   console.log(item.userTweet);
-  // }
+  let range = {
+    min:  0,
+    max:  200,
+    integer: true
+  }
+
+  const [userAmount, setAmount] = useState(0);
+  const [likeAmount, setLikeAmount] = useState(randomNumbers(range));
+  const [retweetAmount, setRetweetAmount] = useState(randomNumbers(range));
+
+  const [isActive, setIsActive] = useState(false);
+  const [retweetIsActive, setRetweetIsActive] = useState(false);
+
+  const handleClick = () => {
+    setLikeAmount(likeAmount + 1)
+    setIsActive(current => !current);
+    if(isActive === true ){
+      setLikeAmount(likeAmount - 1)
+    }
+  };
+
+  const retweetClick = () => {
+    setRetweetAmount(retweetAmount + 1)
+    setRetweetIsActive(current => !current);
+    if(retweetIsActive === true ){
+      setRetweetAmount(retweetAmount - 1)
+    }
+  };
 
 
   return (
@@ -36,13 +68,13 @@ function TweetCard({item, deleteTweet}) {
                 <button className='optionsBtn'>{options}</button>
                 <div className="dropdownMenu">
                   <ul className='dropdownMenuList'>
-                    <li>Not interested in this Tweet</li>
-                    <li>Follow @{item.username}</li>
-                    <li>Add/remove @{item.username} from Lists</li>
-                    <li>Mute @{item.username}</li>
-                    <li>Block @{item.username}</li>
-                    <li>Embed Tweet</li>
-                    <li>Report Tweet</li>
+                    <li> {frown} Not interested in this Tweet</li>
+                    <li> {profileIcon} Follow @{item.username}</li>
+                    <li> {lists} Add/remove @{item.username} from Lists</li>
+                    <li> {mute} Mute @{item.username}</li>
+                    <li> {block} Block @{item.username}</li>
+                    <li> {embed} Embed Tweet</li>
+                    <li> {report}Report Tweet</li>
                   </ul>
                 </div>
               </div>
@@ -55,8 +87,8 @@ function TweetCard({item, deleteTweet}) {
 
             <div className='postedTweetIcons'>
                   <button className='postedIcons comment'>{comment} {item.comments}</button>
-                  <button className='postedIcons retweet'>{retweet} {item.retweets}</button>
-                  <button className='postedIcons heart'>{heart} {item.likes}</button>
+                  <button style={{color: retweetIsActive ? '#19cf86' : '',}} onClick={() => (retweetClick())} className='postedIcons retweet'>{retweet} {retweetAmount}</button>
+                  <button style={{color: isActive ? '#b03060' : '',}} onClick={() => (handleClick())} className='postedIcons heart'>{heart} {likeAmount}</button>
                   <button className='postedIcons share'>{share}</button>
                 </div>
     </Card>

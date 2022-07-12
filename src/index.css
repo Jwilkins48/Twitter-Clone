@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+* {
+    border: transparent;
+}
 body {
     background-color: 	#000000;  
     color: #E1E8ED;
@@ -209,11 +212,6 @@ body {
     color: #2893da;
 }
 
-
-
-
-
-
 .users-Name{
     font-weight: bold;
     margin-right: 5px;
@@ -263,10 +261,14 @@ body {
     color: #dddddd;
     padding: .75rem;
     border-radius: .25rem;
-    width: 330px;
+    width: auto;
     height: auto;
     z-index: -1;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
+
 .dropdown > .optionsBtn:focus + .dropdownMenu {
     opacity: 1;
     transform: translateY(0);
@@ -277,7 +279,77 @@ body {
     list-style-type: none;
     padding: 13px 0 13px 0;
     cursor: pointer;
+    display: flex;
+    gap: 8px;
+    color: #cfcfcf;
 }
+
 .dropdownMenuList li:hover{
     background-color: #0e0e0e;
+}
+
+/* NOTIFICATION SECTION */
+
+.searchInput{
+    padding-left: 50px;
+    background-color: #181d1d;
+    color: #6d6d6d;
+    width: 350px;
+    margin: 0px -65px 0 25px;
+    height: 45px;
+    width: 340px;
+    border-radius: 50px;
+    border: 1px  transparent;
+    position: sticky;
+    font-size: 14px;
+}
+.inputContainer{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+  
+.searchIcon {
+    z-index: 1;
+    padding: 10px;
+    min-width: 50px;
+    text-align: center;
+    margin-right: -82px;
+    color: #6d6d6d;
+}
+  
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.notificationContainer{
+    width: 320px;
+    margin: 25px 0 0 22px;
+    background-color:#181d1d;
+    padding: 10px;
+    height: 450px;
+    border-radius: 13px;
+}
+
+.articleContainer{
+    padding: 10px;
+}
+.notifTopInfo{
+    font-size: 12px;
+    color: #6d6d6d;
+}
+.notifBottomInfo{
+    margin-top: 5px;
+    word-spacing: 1px;
+    font-weight: bold;
+    width: 230px;
+}
+
+.notifHeader{
+    margin-top: 3px;
+    margin-left: 7px;
+    font-size: 20px;
+    font-weight: bold;
 }
