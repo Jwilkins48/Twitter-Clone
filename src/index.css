@@ -370,11 +370,11 @@ body {
 /* Who To Follow Section */
 
 .whoToFollowContainer{
-    width: 340px;
+    width: 343px;
     background-color: #16181c;
     margin: 17px 0 0 30px;
     padding: 10px;
-    height: 300px;
+    height: 335px;
     border-radius: 13px;
 }
 .whoToFollowContainer h2{
@@ -383,10 +383,19 @@ body {
 }
 
 .followAccount{
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
-    margin-left: 5px;
+    margin-top: 15px;
+    margin-left: -9px;
+    width: 341px;
+    padding: 7px;
+}
+
+
+.followAccount:hover, .showMore:hover{
+    background-color: #212329;
+
 }
 
 .followName{
@@ -399,17 +408,35 @@ body {
 }
 
 .followBtn{
-    margin-right: 8px;
+    margin-top: 5px;
+    margin-right: 5px;
     border-radius: 18px;
     width: 75px;
-    height: 32px;
+    height: 33px;
     font-weight: bold;
     font-size: 14px;
+    cursor: pointer;
+}
+.followBtn:hover{
+    background-color: #dfdfdf;
 }
 
 .showMore{
-    margin: 20px 0 0 5px;
+    margin: 10px 0 5px -9px;
     color: #1d90d8;
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
+    width: 342px;
+    height: 52px;
+    border-radius: 0 0 10px 10px;
+    padding: 12px;
+}
+
+.followFeedImages{
+    border-radius: 50%;
+}
+
+.leftFollowInfo{
+    margin-top: 5px;
+    width: 50%;
 }

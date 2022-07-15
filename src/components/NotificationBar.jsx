@@ -35,6 +35,7 @@ function NotificationBar({newsFeed, whoToFollow}) {
         <div className="allFollowContainer">
             {whoToFollow.map((item) => (
               <div className='followAccount' key={item.id} id={item.id}>
+                <img className='followFeedImages' src={item.src} alt='user profile' width="52" height="49"></img>
                 <div className="leftFollowInfo"><p className='followName'>{item.name} </p> <p className='followUsername'>{item.username}</p></div>
                 <div className="rightInfoDiv"><button className='followBtn'>Follow</button></div>  
               </div>

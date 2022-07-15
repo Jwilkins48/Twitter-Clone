@@ -3,7 +3,7 @@ import Card from './Card'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpFromBracket, faEllipsis, faComment, faHeart, faRetweet, faFaceFrown, faUserPlus, faTableList, faVolumeXmark, faBan, faCode, faFlag, } from '@fortawesome/free-solid-svg-icons';
-import UserTweet from './dropdownMenus/UserTweet';
+
 let randomNumbers = require('random-number');
 
 
